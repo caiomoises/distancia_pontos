@@ -35,7 +35,7 @@ if st.button("Calcular Distância"):
     plt.text(x1, y1, '(x1,y1)', fontsize=12, ha='left', va='bottom', rotation=0, color='blue', weight='bold', style='italic')
     plt.text(x2, y2, '(x2,y2)', fontsize=12, ha='right', va='bottom', rotation=0, color='blue', weight='bold', style='italic')
 
-    plt.text((x1 + x2) / 2, y1 - 0.1, r'$\Delta X$', fontsize=12, ha='center', va='center', color='blue', weight='bold', style='italic')
+    plt.text((x1 + x2) / 2, y1 - 0.1, r'$\Delta X$', fontsize=12, ha='center', va='bottom', color='blue', weight='bold', style='italic')
     plt.text(x2 + 0.1, (y1 + y2) / 2, r'$\Delta Y$', fontsize=12, ha='left', va='center', color='blue', weight='bold', style='italic')
     
     plt.title('Distância entre dois pontos')
@@ -43,5 +43,8 @@ if st.button("Calcular Distância"):
     plt.ylabel('Eixo Y')
     plt.grid(True)
     st.pyplot(plt)
-
-
+    if st.button("Limpar"):
+        st.write("A tela foi limpa")
+        plt.clf()
+        plt.close()
+        st.write("A tela foi limpa")
